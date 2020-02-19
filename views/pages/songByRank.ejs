@@ -1,0 +1,8 @@
+<%- include( '../partials/header') %>
+
+<% filteredSong.forEach(item => { %>
+    <%- include( '../partials/song', {item}) %>
+    <% }); %>
+
+
+<%- include( '../partials/footer') %>

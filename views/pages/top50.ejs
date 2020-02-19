@@ -1,0 +1,11 @@
+
+<%- include( '../partials/header') %>
+
+<%# insert list song %> 
+
+<% top50.forEach(item => { %>
+    <%- include( '../partials/song', {item}) %>
+    <% }); %>
+
+
+<%- include( '../partials/footer') %>
