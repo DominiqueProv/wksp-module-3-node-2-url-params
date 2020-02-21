@@ -1,0 +1,73 @@
+
+.book-container{
+    display: flex;
+    justify-content: center ;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 50px;
+    // flex-direction: column;
+}
+
+
+.listItems-book{
+    width: 30%;
+    font-family: 'Roboto';
+    font-weight: 200;
+    padding: 40px;
+    
+}
+
+.imageBook{
+    text-align: left;
+    padding-bottom: 30px;
+}
+
+
+.book-title{
+    font-size: 1em;
+    text-align: left;
+}
+
+.description{
+    font-size: .8em;
+    line-height: 1.5em;}
+
+.btn-book{
+    margin-top: 30px;
+
+}
+    
+
+.btn-book a{
+    font-size: .8em;
+    padding: 10px 20px;
+    border: 1px solid black;
+    color: black;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+.btn-book a:hover{
+    background-color: black;
+    color: white;
+
+}
+
+
+.type{
+    text-transform: uppercase;
+    font-size: .6em;
+    background-color: black;
+    color: white;
+    width: 30%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.book-filter{
+    display: flex;
+    justify-content: space-between;
+
+}

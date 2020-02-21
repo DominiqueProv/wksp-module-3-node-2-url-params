@@ -10,6 +10,7 @@
     background-color: white;
     transition: all .7s;
     padding: 10px;
+    
 }
 
 .listItems:hover{
@@ -24,11 +25,11 @@
 }
 
 .title{
-    width: 40%;
+    width: 30%;
 }
 
 .stream-count{
-    width: 20%;
+    width: 10%;
     text-align: center;
 }
 
@@ -45,5 +46,25 @@
 .song-title{
     font-weight: 700;
     font-size: 1.1em;
+}
+    
+.btn a{
+    font-size: .8em;
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    transition: all .7s;
+}
+
+.btn{
+    margin-bottom: 10px;
+    width: 10%;
+}
+
+.btn a:hover{
+    background-color: black;
 
 }
