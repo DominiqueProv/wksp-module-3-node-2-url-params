@@ -1,0 +1,9 @@
+<%- include( '../partials/header') %>
+
+<% mostPopularArtist.forEach(item => { %>
+    <%- include( '../partials/song', {item}) %>
+    <% }); %>
+
+
+
+<%- include( '../partials/footer') %>

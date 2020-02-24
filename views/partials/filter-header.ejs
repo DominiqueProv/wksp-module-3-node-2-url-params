@@ -1,0 +1,23 @@
+<div class="header-form">
+    <!-- <div class="book-Id" id="formId">
+    <form>
+        <label for="bookId">Choose book by ID</label>
+        <input type="text" id="bookById" name="book">
+      </form>
+</div> -->
+    <div class="book-filter">
+        <form action="/bookfilter" method="POST">
+            <label class="form-title" for="book">Category</label>
+            <select id="book" name="book" onchange="this.form.submit()">
+              <option name="all" value="All">All</option>
+              <option name="fiction" value="fiction">Fiction</option>
+              <option name="non-fiction" value="non-fiction">Non-fiction</option>
+              <option name="drama" value="drama">Drama</option>
+              <option name="graphic-novel" value="graphic-novel">Graphic novel</option>
+            </select>
+        <noscript> <input type="submit" value="Go"></noscript>
+          </form>
+
+    </div>
+
+</div>

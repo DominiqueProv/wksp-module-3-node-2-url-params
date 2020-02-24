@@ -1,0 +1,15 @@
+<%- include( '../partials/header') %>
+
+<%- include( '../partials/filter-header') %>
+
+
+<div class="book-container">
+<% books.forEach(item => { %>
+    <%- include( '../partials/book', {item,link}) %>
+    <% }); %>
+
+</div>
+
+
+<%- include( '../partials/footer') %>
+

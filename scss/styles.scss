@@ -3,6 +3,7 @@
 @import 'typography';
 @import 'song';
 @import 'song-page';
+@import 'book-list';
 
 body {
     background: #fafafa;
@@ -12,11 +13,14 @@ body {
 }
 
 header {
-    flex: 0 0 60px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #808080;
-    padding: 0 24px;
+    justify-content: center;
+    // border-bottom: 1px solid #808080;
+    padding: 30 24px;
+    background-color: black;
+    height: 100px;
+
 }
 
 .main {

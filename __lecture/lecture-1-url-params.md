@@ -27,6 +27,20 @@ app.get('/question10', q10)
 ```js
 // ...
 
+//if they type in:
+///question/6 instead of question1 would be question/6
+
+app.get(/'question/:number', (req,res) =>{
+    const number = req.params.number;
+    console..log(number); //6
+});
+
+
+app.get(/'question/:song', (req,res) =>{
+    const number = req.params.number;
+    console..log(number); //6
+});
+
 ```
 
 </div></div>
