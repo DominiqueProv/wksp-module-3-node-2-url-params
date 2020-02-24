@@ -243,9 +243,67 @@ codeblock {
   margin-top: 20px;
   margin-bottom: 20px; }
 
-.book-filter {
+.header-form {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center;
+  width: 83%;
+  margin: 0 auto;
+  height: 80px;
+  margin-top: 30px; }
+
+.book {
+  display: flex;
+  justify-content: center; }
+
+.imageBook-detail {
+  margin: 40px; }
+
+.detail-container {
+  margin: 40px;
+  width: 400px; }
+
+.type-detail {
+  text-transform: uppercase;
+  font-size: .6em;
+  background-color: black;
+  color: white;
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 20px; }
+
+.book-author {
+  margin-bottom: 20px; }
+
+.header {
+  color: white;
+  text-align: center; }
+
+label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  padding-right: 15px; }
+
+.book-filter select {
+  font-family: 'Roboto';
+  width: 200px;
+  height: 30px;
+  font-size: 1em; }
+
+.select-selected {
+  background-color: DodgerBlue; }
+
+.book-filter input {
+  font-size: .8em;
+  padding: 6px 20px;
+  border: 1px solid black;
+  color: black;
+  text-decoration: none;
+  transition: all .5s; }
+
+.book-filter input:hover {
+  background-color: black;
+  color: white; }
 
 body {
   background: #fafafa;
@@ -254,11 +312,12 @@ body {
   min-height: 100vh; }
 
 header {
-  flex: 0 0 60px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #808080;
-  padding: 0 24px; }
+  justify-content: center;
+  padding: 30 24px;
+  background-color: black;
+  height: 100px; }
 
 .main {
   flex: 1 0 auto;

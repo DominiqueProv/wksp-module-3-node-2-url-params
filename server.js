@@ -1,6 +1,6 @@
 'use strict';
 
-
+const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const express = require('express');
 const { top50 } = require('./data/top50');
@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 8000;
 const app = express();
 
 
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
@@ -26,6 +28,7 @@ app.get('/', (req, res) => {
         top50: top50,
     });
 });
+
 
 app.get('/top50/popular-artist', (req, res) => {
     res.render('pages/popularArtists', {
@@ -48,7 +51,18 @@ app.get('/top50/song/:number', (req, res) => {
 app.get('/bookLibrary', (req, res) => {
     res.render('pages/bookLibrary', {
         title: 'Book review 2020',
-        link: `/library/book/`,
+        link: `/book/`,
+        books,
+        type : books.type,
+        author: books.author,
+        description: books.description,
+    });
+});
+
+app.get('/bookCat', (req, res) => {
+    res.render('pages/bookCat', {
+        title: 'Book review 2020',
+        link: `/book/`,
         books,
         type : books.type,
         author: books.author,
@@ -57,15 +71,34 @@ app.get('/bookLibrary', (req, res) => {
 });
 
 
-app.get('/books/:number', (req, res) => {
-    const bookNumber = req.params.number;
-    const filteredBook = books.filter(book => book.id == bookNumber);
-    res.render('pages/bookById', {
-        title: `Book#${filteredBook[0].id}`,
-        filteredBook
+app.get('/book/:id', (req, res) => {
+    const bookId = req.params.id;
+    const filteredBook = books.filter(book => book.id == bookId);
+    res.render('pages/bookDetail', {
+        title: `${filteredBook[0].title}`,
+        filteredBook,
+        link: `/bookLibrary`,
+
+
     });
 });
 
+
+app.post('/bookfilter', (req,res,) => {
+    let type = req.body.book;
+     console.log(type);
+     let filterdBooks = books.filter(book => book.type === type)
+    // const filteredCat = books.filter(book => book.type === type);
+    res.render('pages/bookCat', {
+        // filteredCat,
+        title: 'Some title',
+        link: `/book/`,
+        books: filterdBooks,
+        type : type,
+        author: books.author,
+        description: books.description,
+    })    
+}),
 
 // handle 404s
 app.get('*', (req, res) => {

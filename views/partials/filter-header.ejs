@@ -1,20 +1,21 @@
 <div class="header-form">
-    <div class="book-Id" id="formId">
+    <!-- <div class="book-Id" id="formId">
     <form>
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
+        <label for="bookId">Choose book by ID</label>
+        <input type="text" id="bookById" name="book">
       </form>
-</div>
+</div> -->
     <div class="book-filter">
-        <form action="">
-            <label for="cars">Choose a car:</label>
-            <select id="cars" name="cars">
-              <option value="fiction">Volvo</option>
-              <option value="non-fiction">Saab</option>
-              <option value="Drama">Fiat</option>
-              <option value="Graphic novel">Audi</option>
+        <form action="/bookfilter" method="POST">
+            <label class="form-title" for="book">Category</label>
+            <select id="book" name="book" onchange="this.form.submit()">
+              <option name="all" value="All">All</option>
+              <option name="fiction" value="fiction">Fiction</option>
+              <option name="non-fiction" value="non-fiction">Non-fiction</option>
+              <option name="drama" value="drama">Drama</option>
+              <option name="graphic-novel" value="graphic-novel">Graphic novel</option>
             </select>
-            <input type="submit">
+        <noscript> <input type="submit" value="Go"></noscript>
           </form>
 
     </div>
